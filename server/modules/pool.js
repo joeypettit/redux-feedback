@@ -1,3 +1,24 @@
+const pg = require('pg');
+
+const pool = new pg.Pool({
+    database: 'show_store',
+    host: 'localhost',
+    port: 5432,
+    max: 10,
+    idleTimeoutMillis: 30000
+});
+
+pool.on('connect', ()=>console.log('pg connected'));
+
+pool.on('error', (error) => console.log('Error with pg connection', error));
+
+module.exports = pool;
+
+
+
+
+
+
 /**
 * You'll need to use environment variables in order to deploy your
 * pg-pool configuration to Heroku.
@@ -38,4 +59,4 @@
 //     };
 // }
 
-module.exports = new pg.Pool(config);
+// module.exports = new pg.Pool(config);
