@@ -3,22 +3,22 @@ import axios from 'axios';
 
 function ReviewFeedback(){
     const finalFeedback = useSelector(store => store.feedback);
-    console.log(finalFeedback);
+    console.log('finalfeedback is', finalFeedback);
 
     function submitFeedback(){
-        // axios({
-        //     method: 'POST',
-        //     url: '/feedback/',
-        //     payload: finalFeedback
-        // }).then(()=>{
-        //     // route to next page
+        axios({
+            method: 'POST',
+            url: '/feedback/',
+            data: finalFeedback
+        }).then(()=>{
+            // route to next page
 
-        // }).catch(error => console.log('Error with POST', error));
+        }).catch(error => console.log('Error with POST', error));
     }
     
     return(
-        <div id="review-view">
-            <h1>Review Your Feedback , {finalFeedback.name}</h1>
+        <div id="review-view" className="view-window">
+            <h1>Review Your Feedback</h1>
             <h3 className="review-h3">Feelings: {finalFeedback.feeling}</h3>
             <h3 className="review-h3">Understanding: {finalFeedback.understanding}</h3>
             <h3 className="review-h3"> Support: {finalFeedback.support}</h3>

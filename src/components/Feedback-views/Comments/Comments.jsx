@@ -1,6 +1,7 @@
 import { useHistory } from "react-router-dom";
 import {useState} from 'react';
 import {useDispatch} from 'react-redux';
+import './Comments.css';
 
 function Comments(){
     // assign history and dispatch
@@ -21,10 +22,13 @@ function Comments(){
     }
 
     return (
-        <div id="comment-view">
+        <div id="comment-view" className="view-window">
             <h1>Comments</h1>
-            <label htmlFor="comments-in">Your comments: </label>
-            <textarea id="comments-in" type="text" name="comments-input" onChange={(e)=>setInputValue(e.target.value)}/>
+            <h2>Do you have any additional comments for us?</h2>
+            <div className="comment-input-w-field">
+                <label htmlFor="comments-in"></label>
+                <textarea placeholder="Your Comments Here...(optional)" id="comments-in" type="text" name="comments-input" onChange={(e)=>setInputValue(e.target.value)}/>
+            </div>
             <button onClick = {()=>nextButton()}>Next</button>
         </div>
     )

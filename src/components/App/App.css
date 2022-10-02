@@ -1,18 +1,17 @@
+:root{
+  --lightBlue: #93B7BE;
+  --darkBlue: #183936;
+  --lightGreen: #95E06C;
+  --darkGreen: #297045;
+}
+
 .App {
   text-align: center;
+  background-color: #93B7BE;
+  margin: 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.App-header {
-  background-color: #033076;
-  min-height: 70px;
-  padding: 20px;
-  color: white;
-  margin-bottom: 20px;
-}
-
-.App-title {
-  font-size: 2em;
-}
 
 .App-intro {
   font-size: large;
@@ -20,4 +19,42 @@
 
 h4 {
   font-style: italic;
+}
+
+.view-window{
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 1em;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.527);
+}
+
+.label-w-button{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.radio-button-spread{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.scoring{
+  font-size: small;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+button{
+  border-radius: .5em;
+}
+
+button:hover{
+  background-color: #183936;
+  color: white;
+  border-radius: .5em;
 }

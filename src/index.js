@@ -10,7 +10,6 @@ import {Provider} from 'react-redux';
 import {createStore, combineReducers, applyMiddleware} from 'redux';
 
 const feedbackTemplate = {
-    name: 'Joey',
     feeling: 1,
     understanding: 1,
     support: 5,
@@ -39,10 +38,6 @@ const feedbackReducer = (state = {}, action) => {
         console.log('COMMENTS update:', action.payload);
         updatedFeedback.comments = action.payload;
         return updatedFeedback;
-    } else if( action.type === 'ADD_NAME'){
-        console.log('NAME update:', action.payload);
-        updatedFeedback.name = action.payload;
-            return updatedFeedback;
     } else if (action.type === 'CLEAR_FEEDBACK'){
     return updatedFeedback;
     } else{

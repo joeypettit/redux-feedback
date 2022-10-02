@@ -8,9 +8,9 @@ router.post('/', (req,res)=>{
     const newFeedback = req.body;
     console.log('Incoming feedback:', newFeedback);
     const queryText = `INSERT INTO "feedback" 
-                        ("name", "feeling", "understanding", "support", "comments")
-                        VALUES ($1, $2, $3, $4, $5);`;
-    pool.querys(queryText, [newFeedback.name, newFeedback.feeling, newFeedback.understanding, newFeedback.support, newFeedback.comments])
+                        ("feeling", "understanding", "support", "comments")
+                        VALUES ($1, $2, $3, $4);`;
+    pool.query(queryText, [newFeedback.feeling, newFeedback.understanding, newFeedback.support, newFeedback.comments])
     .then(()=> {
         console.log('POST successful')
         res.sendStatus(201);
@@ -19,6 +19,7 @@ router.post('/', (req,res)=>{
         res.sendStatus(500);
     });
 });
+
 
 
 

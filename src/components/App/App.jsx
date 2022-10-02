@@ -20,7 +20,7 @@ function App() {
     <Router>
       <div className='App'>
         <Header />
-
+        
         {/* ROUTES */}
         <Route path='/' exact>
           <Welcome />
@@ -40,7 +40,6 @@ function App() {
         <Route path='/review'>
           <ReviewFeedback />
         </Route>
-
       </div>
     </Router>
   );

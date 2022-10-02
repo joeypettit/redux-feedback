@@ -1,7 +1,7 @@
 const pg = require('pg');
 
 const pool = new pg.Pool({
-    database: 'show_store',
+    database: 'prime_feedback',
     host: 'localhost',
     port: 5432,
     max: 10,

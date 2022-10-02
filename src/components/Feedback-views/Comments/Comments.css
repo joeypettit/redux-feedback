@@ -1,0 +1,9 @@
+.comment-input-w-field{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+textarea{
+    resize: none;
+}
