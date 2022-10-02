@@ -10,6 +10,7 @@ function Feelings(){
     const [inputValue, setInputValue] = useState();
     console.log("Feeling Value:", inputValue);
 
+    // dispatch to redux and route to next view
     function nextButton(){
         let action = {
             type: 'ADD_FEELING',

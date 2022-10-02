@@ -10,6 +10,7 @@ function Understanding(){
     const [inputValue, setInputValue] = useState();
     console.log("Understanding Value:", inputValue);
 
+    // dispatch to redux and route to next view
     function nextButton(){
         let action = {
             type: 'ADD_UNDERSTANDING',

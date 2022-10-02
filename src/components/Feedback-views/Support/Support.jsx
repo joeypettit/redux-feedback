@@ -12,13 +12,14 @@ function Support(){
     const [inputValue, setInputValue] = useState();
     console.log("Support Value:", inputValue);
 
+    // dispatch to redux and route to next view
     function nextButton(){
         let action = {
             type: 'ADD_SUPPORT',
             payload: inputValue
         }
         dispatch(action);
-        history.push('/comments')
+        history.push('/comments');
     }
 
     return (
