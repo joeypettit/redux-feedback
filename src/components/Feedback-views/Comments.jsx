@@ -1,7 +1,6 @@
 import { useHistory } from "react-router-dom";
 import {useState} from 'react';
 import {useDispatch} from 'react-redux';
-import './Comments.css';
 
 function Comments(){
     // assign history and dispatch

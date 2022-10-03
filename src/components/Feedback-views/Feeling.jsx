@@ -1,15 +1,21 @@
 import { useHistory } from "react-router-dom";
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {useDispatch} from 'react-redux';
-import './Feeling.css';
 
 function Feelings(){
     // assign history and dispatch
     const history = useHistory();
     const dispatch = useDispatch();
+
+    
+
     // assign last selected radio button value
     const [inputValue, setInputValue] = useState('');
     console.log("Feeling Value:", inputValue);
+
+    // run everytime resetVar (props) changes
+    // useEffect(()=> {setInputValue('')}, resetVar);
+
 
     // dispatch to redux and route to next view
     function nextButton(){
@@ -23,8 +29,10 @@ function Feelings(){
             dispatch(action);
             history.push('/understanding');
         }
-        
     }
+
+
+
 
     return (
         <div id="feeling-view" className="view-window">

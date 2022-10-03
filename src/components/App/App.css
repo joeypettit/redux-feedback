@@ -25,7 +25,7 @@ h4 {
   background-color: white;
   margin: 10px;
   padding: 10px;
-  border-radius: 1em;
+  border-radius: .5em;
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.527);
 }
 
@@ -57,4 +57,29 @@ button:hover{
   background-color: #183936;
   color: white;
   border-radius: .5em;
+}
+
+.comment-input-w-field{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+textarea{
+  resize: none;
+}
+
+.App-header {
+  background-color: white;
+  min-height: 70px;
+  padding: 20px;
+  color: black;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.527);
+  margin: 0px 10px 20px 10px;
+  border-radius: 0em 0em .5em .5em;
+}
+
+.App-title {
+  font-size: 2em;
+  text-decoration: underline;
 }

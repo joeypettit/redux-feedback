@@ -39,6 +39,7 @@ const feedbackReducer = (state = {}, action) => {
         updatedFeedback.comments = action.payload;
         return updatedFeedback;
     } else if (action.type === 'CLEAR_FEEDBACK'){
+        updatedFeedback = {};
     return updatedFeedback;
     } else{
         return state;

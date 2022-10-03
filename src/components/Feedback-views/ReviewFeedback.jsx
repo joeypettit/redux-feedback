@@ -1,9 +1,12 @@
 import {useSelector} from 'react-redux';
 import axios from 'axios';
+import { useHistory } from "react-router-dom";
 
 function ReviewFeedback(){
+    const history = useHistory();
     const finalFeedback = useSelector(store => store.feedback);
     console.log('finalfeedback is', finalFeedback);
+
 
     function submitFeedback(){
         axios({
@@ -11,7 +14,8 @@ function ReviewFeedback(){
             url: '/feedback/',
             data: finalFeedback
         }).then(()=>{
-            // route to next page
+            history.push('/submitted/');
+            
 
         }).catch(error => console.log('Error with POST', error));
     }

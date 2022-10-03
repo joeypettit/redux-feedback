@@ -1,24 +1,33 @@
 import React from 'react';
 import axios from 'axios';
 import './App.css';
+import { useHistory } from 'react-router-dom';
 
 // import router functions
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
-
 // Import Components
-import Comments from '../Feedback-views/Comments/Comments';
-import Feelings from '../Feedback-views/Feeling/Feeling';
-import ReviewFeedback from '../Feedback-views/ReviewFeedback/ReviewFeedback';
-import Support from '../Feedback-views/Support/Support';
-import Understanding from '../Feedback-views/Understanding/Understanding';
-import Header from './Header/Header';
-import Welcome from '../Feedback-views/Welcome/Welcome';
+import Comments from '../Feedback-views/Comments';
+import Feelings from '../Feedback-views/Feeling';
+import ReviewFeedback from '../Feedback-views/ReviewFeedback';
+import Support from '../Feedback-views/Support';
+import Understanding from '../Feedback-views/Understanding';
+import Header from './Header';
+import Welcome from '../Feedback-views/Welcome';
+import Submitted from '../Feedback-views/Submitted';
+
+
+
 
 function App() {
+  // call functions and store as variables
+  const history = useHistory();
+
+
   return (
     <Router>
       <div className='App'>
+      
         <Header />
         
         {/* ROUTES */}
@@ -40,8 +49,13 @@ function App() {
         <Route path='/review'>
           <ReviewFeedback />
         </Route>
+        <Route path='/submitted'>
+          <Submitted />
+        </Route>
+        
       </div>
     </Router>
+    
   );
 }
 
